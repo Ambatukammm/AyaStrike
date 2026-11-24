@@ -1,0 +1,90 @@
+[
+  {
+    "product": "OpenSSH",
+    "version": {"lt": "7.4"},
+    "cve": "CVE-2016-10009",
+    "cwe": ["CWE-426"],
+    "severity": "high",
+    "title": "OpenSSH agent forwarding untrusted-search-path code execution",
+    "description": "Older OpenSSH versions load PKCS#11 modules from an untrusted path via agent forwarding.",
+    "remediation": "Upgrade OpenSSH to 7.4 or later.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2016-10009"]
+  },
+  {
+    "product": "Apache",
+    "version": {"ge": "2.4.49", "le": "2.4.50"},
+    "cve": "CVE-2021-41773",
+    "cwe": ["CWE-22", "CWE-98"],
+    "severity": "critical",
+    "title": "Apache HTTP Server path traversal / RCE",
+    "description": "Path traversal in Apache 2.4.49/2.4.50 can expose files outside the document root and, with CGI enabled, allow remote code execution.",
+    "remediation": "Upgrade Apache httpd to 2.4.51 or later.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2021-41773"]
+  },
+  {
+    "product": "nginx",
+    "version": {"lt": "1.21.0"},
+    "cve": "CVE-2021-23017",
+    "cwe": ["CWE-193"],
+    "severity": "high",
+    "title": "nginx resolver off-by-one heap write",
+    "description": "A DNS resolver off-by-one in nginx may allow memory corruption.",
+    "remediation": "Upgrade nginx to 1.21.0 or later (fix backported to 1.20.1).",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2021-23017"]
+  },
+  {
+    "product": "OpenSSL",
+    "version": {"ge": "3.0.0", "lt": "3.0.7"},
+    "cve": "CVE-2022-3602",
+    "cwe": ["CWE-787"],
+    "severity": "high",
+    "title": "OpenSSL X.509 punycode buffer overflow",
+    "description": "A buffer overflow in X.509 certificate verification (punycode) in OpenSSL 3.0.x before 3.0.7.",
+    "remediation": "Upgrade OpenSSL to 3.0.7 or later.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2022-3602"]
+  },
+  {
+    "product": "vsftpd",
+    "version": {"eq": "2.3.4"},
+    "cve": "CVE-2011-2523",
+    "cwe": ["CWE-78"],
+    "severity": "critical",
+    "title": "vsftpd 2.3.4 backdoor",
+    "description": "A backdoored build of vsftpd 2.3.4 opens a root shell on port 6200.",
+    "remediation": "Reinstall vsftpd from a trusted source; upgrade to a current version.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2011-2523"]
+  },
+  {
+    "product": "ProFTPD",
+    "version": {"lt": "1.3.5"},
+    "cve": "CVE-2015-3306",
+    "cwe": ["CWE-264"],
+    "severity": "critical",
+    "title": "ProFTPD mod_copy unauthenticated file copy",
+    "description": "The mod_copy module in ProFTPD before 1.3.5a allows unauthenticated SITE CPFR/CPTO file copy.",
+    "remediation": "Upgrade ProFTPD to 1.3.5a+ or disable mod_copy.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2015-3306"]
+  },
+  {
+    "product": "Samba",
+    "version": {"ge": "3.5.0", "lt": "4.6.4"},
+    "cve": "CVE-2017-7494",
+    "cwe": ["CWE-94"],
+    "severity": "critical",
+    "title": "Samba SambaCry remote code execution",
+    "description": "Samba before 4.6.4/4.5.10/4.4.14 allows a writable share client to load and execute a shared library (EternalRed).",
+    "remediation": "Upgrade Samba, or set 'nt pipe support = no'.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2017-7494"]
+  },
+  {
+    "product": "Microsoft-IIS",
+    "version": {"eq": "6.0"},
+    "cve": "CVE-2017-7269",
+    "cwe": ["CWE-119"],
+    "severity": "high",
+    "title": "IIS 6.0 WebDAV ScStoragePathFromUrl buffer overflow",
+    "description": "A buffer overflow in the WebDAV service of IIS 6.0 allows remote code execution via a long header.",
+    "remediation": "IIS 6.0 is end-of-life; migrate to a supported Windows Server / IIS version.",
+    "refs": ["https://nvd.nist.gov/vuln/detail/CVE-2017-7269"]
+  }
+]

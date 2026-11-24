@@ -1,0 +1,22 @@
+# Aya Suite dependencies.
+#
+# The suite runs with ZERO third-party packages for its core workflow
+# (Tkinter ships with the standard python.org Windows installer, and the
+# scanner/scope/audit/report engines use only the standard library +
+# reportlab for PDF). The packages below unlock extra capability and are
+# recommended for real engagements.
+
+# --- Recommended ---
+requests>=2.28           # richer HTTP for recon/web modules (urllib fallback exists)
+reportlab>=3.6           # PDF report export (HTML/CSV work without it)
+
+# --- Optional (enable specific modules) ---
+dnspython>=2.3           # full DNS record types + AXFR zone-transfer checks
+paramiko>=3.0            # SSH credential testing (gated module)
+msgpack>=1.0             # faster Metasploit RPC (a pure-Python fallback is bundled)
+cryptography>=40.0       # extended certificate parsing in the SSL/TLS audit
+
+# --- External CLI tools (NOT installed by pip; install separately) ---
+# nmap            https://nmap.org              advanced scans, OS/SMB/SNMP NSE
+# Metasploit      https://www.metasploit.com    exploitation interface (msfrpcd)
+# Ollama          https://ollama.com            local AI for the reporting layer

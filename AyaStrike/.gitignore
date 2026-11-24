@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Aya Suite runtime / per-user data (never commit engagement data or secrets)
+.aya_suite/
+projects/*/workspace.db
+projects/*/audit.jsonl
+projects/*/exploit_runs.log
+projects/*/reports/
+*.log
+settings.json
+
+# OS
+.DS_Store
+Thumbs.db
